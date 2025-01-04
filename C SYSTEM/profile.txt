@@ -1,0 +1,14 @@
+Full Name: Mark
+Age: 19
+School: CTU
+Email: markanding@gmail.com
+Grade Level: 1st year college
+School ID: 1359781
+-----------------------------
+Full Name: Huey
+Age: 19
+School: UC
+Email: hueysumanting24@gmail.com
+Grade Level: 12
+School ID: 22602131
+-----------------------------
