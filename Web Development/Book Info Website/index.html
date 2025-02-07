@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Time We Never Had</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #1b1b2f;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        h1, h2, h3 {
+            color: #1b1b2f;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        a {
+            color: #1b9aaa;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .info {
+            margin-top: 2rem;
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+        }
+
+        .info ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1rem;
+            background: #1b1b2f;
+            color: #fff;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.5s, transform 1.5s;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header class="fade-in">
+        <h1>The Time We Never Had</h1>
+    </header>
+
+    <div class="container">
+        <div class="image-container fade-in">
+            <img src="FOR A WORLD WITHOUT US.jpg" alt="The Time We Never Had Cover">
+        </div>
+
+        <section class="info fade-in">
+            <h2>About the Novel</h2>
+            <p><strong>Genre:</strong> Science Fiction, Dystopian, Drama</p>
+            <p><strong>Synopsis:</strong></p>
+            <p>In a world ravaged by greed, corruption, and a devastating pathogen that sparks an apocalyptic chain of events, siblings Alaric and Elyra Voss are the last hope for humanity. Brilliant scientists from a bleak future, they devise a groundbreaking experiment to send their consciousness back in time to prevent the tragedies that obliterated their world. But tampering with the past comes at a cost—unforeseen consequences threaten the stability of time itself, and their own existence begins to unravel.</p>
+
+            <h2>Scientific Concepts (Spoiler Alert)</h2>
+            <ol>
+                <li><strong>Altering the Timeline Creates a Paradox:</strong> By traveling to the past and changing key events (e.g., preventing the V3 pathogen outbreak), the siblings have essentially erased the future they originally came from. Their original timeline—the apocalyptic future—no longer exists. Without this timeline, their presence becomes a logical inconsistency, and the universe "corrects" itself by removing the inconsistency: the siblings.</li>
+                <li><strong>Conservation of Energy in Space-Time:</strong> Physics dictates that matter and energy cannot simply exist without cause or origin. The siblings are anomalies—they are physical matter that no longer belongs to the new timeline. The universe "removes" them to conserve energy and maintain balance.</li>
+                <li><strong>The Novikov Self-Consistency Principle:</strong> This principle posits that any action taken by a time traveler must be consistent with the history of the universe, meaning you cannot create a scenario where you negate your own existence. By altering events to prevent the apocalypse, the siblings have violated this principle. To restore consistency, the universe effectively erases them.</li>
+                <li><strong>Merging Timelines Causes Reality Instability:</strong> When two timelines are merged, the universe reconciles contradictions by choosing one consistent outcome. The timeline they created cannot sustain versions of Alaric and Elyra who were born from the apocalyptic timeline, resulting in their removal.</li>
+                <li><strong>Butterfly Effect and Quantum Mechanics:</strong> The siblings' actions in the past altered countless variables, creating a cascade of changes. Quantum mechanics suggests even small changes lead to vastly different outcomes. The siblings become "disconnected" from reality as they no longer fit into the probabilities of the new timeline.</li>
+            </ol>
+
+            <h3>Learn More:</h3>
+            <p><a href="https://www.bbc.com/future/article/20231110-doctor-who-is-time-travel-really-possible-heres-what-physics-says" target="_blank">Is time travel really possible? Here's what physics says</a></p>
+            <p><a href="https://physicsworld.com/a/simulations-of-time-travel-send-quantum-metrology-back-to-the-future/" target="_blank">Simulations of time travel send quantum metrology back to the future</a></p>            
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 The Time We Never Had. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll(".fade-in");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
