@@ -1,0 +1,51 @@
+Explanation
+Method Declaration:
+
+java
+static void printMatrix(int[][] matrix) {
+static: This keyword indicates that the method belongs to the class, not an instance of the class. You can call this method without creating an object of the class.
+
+void: The method does not return any value.
+
+printMatrix: The name of the method.
+
+int[][] matrix: The parameter passed to the method, which is a two-dimensional array of integers.
+
+Outer Loop: Iterating Through Rows:
+
+java
+for (int row = 0; row < matrix.length; row++) {
+This loop iterates over each row of the matrix.
+
+matrix.length gives the number of rows in the matrix.
+
+Inner Loop: Iterating Through Columns:
+
+java
+for (int col = 0; col < matrix[row].length; col++) {
+This loop iterates over each column of the current row.
+
+matrix[row].length gives the number of columns in the current row.
+
+Printing Each Element:
+
+java
+System.out.printf("%7d", matrix[row][col]);
+System.out.printf: This function prints formatted output. 
+It allows you to format the output in a specific way.
+
+"%7d": This format specifier means print an integer (d) 
+in a field that is at least 7 characters wide. If the integer has fewer than 7 characters, 
+it will be padded with spaces on the left.
+
+matrix[row][col]: This represents the current element of the matrix being printed.
+
+Printing a Newline After Each Row:
+
+java
+System.err.println();
+This prints a newline character after printing all elements of the current row, 
+so the next row's elements are printed on a new line.
+
+System.err: This is typically used for printing error messages, 
+but here it is used to print a newline. It works similarly to System.out.

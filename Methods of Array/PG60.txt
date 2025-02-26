@@ -1,0 +1,9 @@
+Summary
+You can only have one variable-length parameter in a method.
+
+If you mix other parameters with a variable-length parameter, 
+the variable-length parameter must be the last one in the parameter list.
+
+This ensures that the method is clear and unambiguous,
+ making it easier to call and understand. 
+ If you have any further questions or need more clarification, feel free to ask!

@@ -1,0 +1,5 @@
+how to pass individual elements of an array as 
+parameters to methods in Java. It provides an example using an array called list with elements {2, 3, 5}. 
+A method named sumNum takes two parameters and returns their sum. 
+The document demonstrates how to output the sum of the first two elements of the list array 
+by calling the method and passing list[0] and list[1] as arguments.

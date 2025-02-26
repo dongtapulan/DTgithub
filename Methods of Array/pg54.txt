@@ -1,0 +1,22 @@
+
+```java
+for (int j = 0; j < arrivalTimeEmp.length; j++)
+    arrivalTimeEmp[j] = new Clock();
+```
+
+### Explanation
+1. **for Loop Initialization**: The `for` loop is set up to iterate through the entire length of the array `arrivalTimeEmp`.
+2. **Array Element Assignment**: Inside the loop, each element of the `arrivalTimeEmp` array is assigned a new instance of the `Clock` class.
+3. **Clock Class**: The `Clock` class has three fields: `hr`, `min`, and `sec`, all initialized to 0.
+
+### Visual Representation
+The diagram shows the array `arrivalTimeEmp` with several elements, each element being an instance of the `Clock` class. For example:
+- `arrivalTimeEmp[0]` points to a `Clock` object with `hr`, `min`, and `sec` fields set to 0.
+- Similarly, `arrivalTimeEmp[49]` and `arrivalTimeEmp[99]` point to their respective `Clock` objects, each initialized to 0.
+
+### Key Takeaway
+This section demonstrates how to create and initialize an array of objects in Java. 
+By looping through the array and instantiating each element, you ensure that every 
+slot in the array is filled with a properly initialized object, preventing `null` references.
+
+Feel free to ask if you have any more questions or need further clarification!

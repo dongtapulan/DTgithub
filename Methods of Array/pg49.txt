@@ -1,0 +1,14 @@
+### **Summary: Arrays of Objects in Java**
+- Arrays can store objects, allowing manipulation of multiple instances.
+- Example: `T[] array1 = new T[N];` creates an array of `N` objects of type `T`.
+
+- Instantiation requires a loop:  
+  ```java
+  for (int j = 0; j < array1.length; j++)  
+      array1[j] = new T();
+  ```
+- Each element in the array must be explicitly initialized with `new T()`.
+
+Unlike primitive arrays, where values are automatically assigned (e.g., 0 for int), 
+arrays of objects store null references by default. 
+We must explicitly initialize each element:

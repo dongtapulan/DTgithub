@@ -1,0 +1,19 @@
+Explanation of Searching an Array for a Specific Item
+This process is an example of Linear Search, which involves checking each element of the array one by one until the target value is found.
+
+Understanding the Process:
+We have an array list:
+
+
+list = [35, 12, 27, 18, 45, 16, 38]
+(Indexes: [0] [1] [2] [3] [4] [5] [6])
+
+Goal: Find if 27 exists in the array.
+
+Steps:
+
+Compare 27 with list[0] = 35 (No match).
+Compare 27 with list[1] = 12 (No match).
+Compare 27 with list[2] = 27 (Match found).
+The search stops because we found 27.
+

@@ -1,0 +1,16 @@
+Parameters:
+
+arrayOne: The source array (contains the original data).
+arrayTwo: The destination array (receives the copied values).
+For Loop:
+
+The loop runs from i = 0 to i < arrayOne.length, ensuring that every element of arrayOne is accessed.
+It assigns each element of arrayOne[i] to arrayTwo[i], effectively copying the contents.
+
+Important Reminder:
+The comment in the code warns:
+// arrayOne's size must equal to arrayTwo
+// else it will result to ArrayOutOfBound.
+
+Why? If arrayTwo is smaller than arrayOne, trying to access arrayTwo[i] beyond its size will cause an ArrayIndexOutOfBoundsException.
+Fix: Ensure arrayTwo is at least the same size as arrayOne.

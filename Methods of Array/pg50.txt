@@ -1,0 +1,88 @@
+### **Explanation of the Java Code: Sequential Search Algorithm**
+The code implements a **sequential search** algorithm to find a specific item in an array.
+
+#### **Code Breakdown:**
+```java
+public static int seqSearch(int[] list, int searchItem) {
+```
+- This defines a **static method** named `seqSearch` that takes:
+  - `list` → an array of integers (`int[]`)
+  - `searchItem` → an integer that we are searching for
+- The method returns an `int`, which is either the **index of the item if found** or **-1 if not found**.
+
+---
+
+```java
+int location = 0; // Start from the first element
+boolean found = false; // Track if the item is found
+```
+- `location = 0` → This variable keeps track of the current position in the array.
+- `found = false` → A boolean flag that becomes `true` if `searchItem` is found.
+
+---
+
+```java
+while (location < list.length && !found) {
+```
+- **Loop through the array** as long as:
+  - `location` is **within array bounds** (`location < list.length`).
+  - `found` is **false** (stops early if the item is found).
+
+---
+
+```java
+if (list[location] == searchItem) {
+    found = true; // Item is found
+} else {
+    location++; // Move to the next index
+}
+```
+- **Condition check:** If the element at `list[location]` is equal to `searchItem`:
+  - `found = true;` → Marks that the item is found.
+- **Otherwise**, move to the next index (`location++`).
+
+---
+
+```java
+// If found, return the index; if not, return -1
+return found ? location : -1;
+```
+- **Ternary operator (`? :`)**:
+  - If `found == true`, return `location` (index where the item was found).
+  - If `found == false`, return `-1` (indicating the item is not in the array).
+
+---
+
+### **How It Works:**
+#### **Example Input & Execution:**
+```java
+int[] numbers = {5, 12, 8, 20, 7};
+int index = seqSearch(numbers, 20);
+System.out.println(index);
+```
+1. It searches for `20` in `{5, 12, 8, 20, 7}`.
+2. The loop runs until it finds `20` at **index 3**.
+3. The function returns `3`, so the output is:
+   ```
+   3
+   ```
+
+---
+
+### **Key Features:**
+✅ **Linear Search:** Works by checking each element one by one.  
+✅ **Worst-case Complexity:** **O(N)** (if the item is at the last index or missing).  
+✅ **Best-case Complexity:** **O(1)** (if the item is at index `0`).  
+
+---
+
+
+
+---
+
+### **Conclusion:**
+🔹 This is a **simple and effective** way to search in small, unsorted arrays.  
+🔹 It stops searching once the item is found, making it slightly optimized.  
+🔹 However, for larger datasets, **binary search or hash-based methods** would be better.
+
+Would you like an example of binary search too? 😊

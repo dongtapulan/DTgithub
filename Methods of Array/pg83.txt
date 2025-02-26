@@ -1,0 +1,50 @@
+Explanation
+Outer Loop: Iterating Through Rows
+
+java
+for (int row = 0; row < matrix.length; row++) {
+This loop iterates over each row of the matrix.
+
+matrix.length gives the number of rows in the matrix.
+
+Initialize Largest Element for Current Row
+
+java
+largest = matrix[row][0];
+The variable largest is initialized to the first element of the current row (matrix[row][0]).
+
+This serves as a starting point for finding the largest element in the row.
+
+Inner Loop: Iterating Through Columns
+
+java
+for (int col = 1; col < matrix[row].length; col++) {
+This loop iterates over each column of the current row, starting from the second element (col = 1).
+
+matrix[row].length gives the number of columns in the current row.
+
+Finding the Largest Element
+
+java
+if (largest < matrix[row][col])
+    largest = matrix[row][col];
+The if statement compares the current element (matrix[row][col]) with the largest value.
+
+If the current element is greater than largest, largest is updated to the current element.
+
+Print the Largest Element of the Current Row
+
+java
+System.out.println("The largest element of row " + (row + 1) + " = " + largest);
+After finding the largest element in the current row, the code prints the result to the console.
+
+(row + 1) is used to display the row number in a human-readable format (starting from 1).
+
+Summary
+The outer loop iterates through each row of the matrix.
+
+The inner loop iterates through each column within the current row to find the largest element.
+
+The largest variable is updated whenever a larger element is found.
+
+The result is printed for each row, showing the largest element.
