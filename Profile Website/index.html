@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Huey's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0a0f1c;
+      --text-color: #e0e8ff;
+      --card-bg: #101e3a;
+      --accent: #00c3ff;
+    }
+
+    body.dark-mode {
+      --bg-color: #050a1a;
+      --text-color: #d0e1ff;
+      --card-bg: #0d1730;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      background: var(--bg-color);
+      color: var(--text-color);
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: relative;
+      background: linear-gradient(135deg, #081a3a, #102a4c);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeDown 1.2s ease-in-out;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.8em;
+      letter-spacing: 2px;
+    }
+
+    header img {
+      width: 150px;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+
+    header img:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .dark-toggle {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background: var(--accent);
+      color: black;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      z-index: 999;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeUp 1s ease-in-out;
+    }
+
+    .section h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.2em;
+      margin-bottom: 20px;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      color: var(--text-color);
+      display: inline-block;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+      width: 250px;
+      transform-style: preserve-3d;
+      transition: transform 0.3s ease, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: rotateY(10deg) rotateX(10deg);
+      box-shadow: 0 25px 40px rgba(0,0,0,0.6);
+    }
+
+    #parallax {
+      background-image: url('https://t3.ftcdn.net/jpg/01/19/97/46/360_F_119974663_uhDXuKYiEcbLStbpcrWQsVUjI7mF0yck.jpg');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2.5em;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: bold;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+      animation: fadeZoom 2s ease;
+    }
+
+    @keyframes fadeZoom {
+      from { opacity: 0; transform: scale(1.1); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: linear-gradient(135deg, #0b1b33, #112b4d);
+      color: white;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <img src="Profile.png" alt="Huey Profile" />
+    <h1>HI! MY NAME IS HUEY</h1>
+    <p>Technologist | A HUMAN BEING | A NORMAL PERSON</p>
+  </header>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>The only thing I know is that I know nothing.</p>
+  </section>
+
+  <div id="parallax">Welcome to My World 🌍</div>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Matrix Operators [not a great project]</h3>
+      <p>Performs advanced Java matrix operations.</p>
+    </div>
+    <div class="project-card">
+      <h3>Art Gallery</h3>
+      <p>Abstract digital art collection with culture fusion.</p>
+    </div>
+    <div class="project-card">
+      <h3>AchieveMate</h3>
+      <p>A C system that provides grade calculation, study notes, and mental health counseling and .</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Connect with me: <a href="https://www.facebook.com/huey.sumanting">Facebook</a></p>
+    <p>© 2025 Huey Sumanting</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    window.addEventListener('scroll', function () {
+      const parallax = document.getElementById('parallax');
+      let offset = window.pageYOffset;
+      parallax.style.backgroundPositionY = offset * 0.5 + 'px';
+    });
+  </script>
+</body>
+</html>
